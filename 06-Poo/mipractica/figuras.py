@@ -10,18 +10,15 @@ class Figura():
         pass
     def perimetro(self):
         pass
-    def probar_figura(self):
-        pass
 
 class Rectangulo(Figura):
-    def __init__(self, nombre, base, altura):
-        Figura.__init__(self, nombre)
+    def __init__(self, base, altura):
+        self.nombre = __class__.__name__
         self.base = base
         self.altura = altura
 
-    def area(self, base, altura):
-        Figura.area(self)
-        return base * altura
+    def area(self):
+        return self.base * self.altura
 
     def perimetro(self, base, altura):
         Figura.perimetro(self)
